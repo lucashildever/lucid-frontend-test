@@ -19,6 +19,9 @@ function Variable({ variableName, variableContent }: IVariable) {
 const VariableContainer = styled.div`
   display: flex;
   align-items: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
+
   > span {
     min-width: 100px;
     height: 40px;

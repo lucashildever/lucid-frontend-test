@@ -6,23 +6,29 @@ function VariablesList() {
   const variables = useVariablesStore((state) => state.variables);
 
   return (
-    <div>
-      {variables.map((variable) => (
-        <VariablesListContainer key={variable.id}>
+    <VariablesListContainer>
+      {variables.length === 0 ? (
+        <p>No variables yet</p>
+      ) : (
+        variables.map((variable) => (
           <Variable
+            key={variable.id}
             variableName={variable.name}
             variableContent={variable.content}
           />
-        </VariablesListContainer>
-      ))}
-    </div>
+        ))
+      )}
+    </VariablesListContainer>
   );
 }
 
 const VariablesListContainer = styled.div`
   display: flex;
-  margin-top: 4px;
-  margin-bottom: 4px;
+  flex-direction: column;
+  background-color: #cbe7ff;
+  padding: 25px;
+  width: fit-content;
+  border-radius: 15px;
 `;
 
 export default VariablesList;

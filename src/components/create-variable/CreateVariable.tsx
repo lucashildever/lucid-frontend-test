@@ -53,7 +53,7 @@ function CreateVariable() {
   );
 }
 const CreateVariableContainer = styled.div`
-  margin-top: 35px;
+  margin-top: 25px;
 `;
 
 const AddVariableFormContainer = styled.div`
